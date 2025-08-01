@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC - Diệu Thanh English</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+        color: #333;
+      }
+
+      header {
+        background-color: #ffffffaa;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #0077cc;
+      }
+
+      p {
+        font-style: italic;
+        color: #ff4081;
+        margin-top: 5px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px 20px;
+        gap: 40px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: #0077cc;
+        text-align: center;
+      }
+
+      .dropdown {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .card:hover .dropdown-content {
+        display: flex;
+      }
+
+      .dropdown-content a {
+        text-decoration: none;
+        color: #444;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: #f0f8ff;
+        margin: 4px 0;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #b2ebf2;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .back-btn a {
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #0077cc;
+        color: white;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .back-btn a:hover {
+        background-color: #005fa3;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Khám Phá TOEIC Cùng Diệu Thanh English</h1>
+      <p>"Be your sister, be your friend" – vừa học vừa chill 😎</p>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h2>Listening</h2>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="listening1.html">Đề Listening 01</a>
+            <a href="#">Đề Listening 02</a>
+            <a href="#">Đề Listening 03</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Reading</h2>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="listening1.html">Đề Reading 01</a>
+            <a href="#">Đề Reading 02</a>
+            <a href="#">Đề Reading 03</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Tài Liệu</h2>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#">Tổng hợp ngữ pháp</a>
+            <a href="#">Từ vựng theo chủ đề</a>
+            <a href="#">Tips làm bài thi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-btn">
+      <a href="index.html">Quay lại Trang chủ</a>
+    </div>
+
+    <footer>© 2025 Diệu Thanh English. All rights reserved.</footer>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diệu Thanh English - Học Tiếng Anh Vui Như Đi Chơi</title>
+    <style>
+      :root {
+        --main-blue: #6ec3ff;
+        --main-pink: #ffb3c6;
+        --main-yellow: #fff3b0;
+        --text-color: #2a2a2a;
+        --card-bg: #ffffffcc;
+        --gradient: linear-gradient(145deg, #ffe6e6, #d6f0ff, #fff9cc);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--gradient);
+        background-size: 400% 400%;
+        animation: gradientShift 30s ease infinite;
+        color: var(--text-color);
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      header {
+        background: white;
+        text-align: center;
+        padding: 20px 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-bottom: 4px solid var(--main-pink);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.7rem;
+        color: #004b87;
+      }
+
+      header p.slogan {
+        font-size: 1.05rem;
+        font-style: italic;
+        color: #d63384;
+      }
+
+      .logo {
+        width: 90px;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        background: #fff;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #004b87;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      nav a:hover {
+        color: #ff69b4;
+        transform: scale(1.08);
+      }
+
+      section {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        padding: 40px 30px;
+        max-width: 880px;
+        margin: 40px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      section h2 {
+        font-size: 2rem;
+        color: #004b87;
+        margin-bottom: 15px;
+      }
+
+      section p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      footer {
+        background-color: #004b87;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 0.9rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        nav {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/dolphin-logo.png" alt="Logo Diệu Thanh English" />
+      <h1>Diệu Thanh English</h1>
+      <p class="slogan">
+        Tiếng Anh không khó – chỉ là bạn chưa học với tụi mình!
+      </p>
+    </header>
+
+    <nav>
+      <a href="toeic.html">TOEIC</a>
+      <a href="#ielts">IELTS</a>
+      <a href="#about">About</a>
+      <a href="#contact">Liên Hệ</a>
+    </nav>
+
+    <section id="toeic">
+      <h2>🚀 Khóa học TOEIC</h2>
+      <p>
+        TOEIC nghe như boss khó nhằn? Không sao, bạn có team Diệu Thanh ở đây!
+        Với giáo trình siêu thực tế, ví dụ siêu “cà khịa” (chắc chắn vui hơn
+        việc ngồi đếm từ mới), bạn sẽ luyện Listening và Reading theo kiểu “ngấm
+        lúc nào không hay”. Điểm cao như chơi, không cần stress!
+      </p>
+    </section>
+
+    <section id="ielts">
+      <h2>📘 Khóa học IELTS</h2>
+      <p>
+        IELTS – tưởng căng thẳng mà hóa ra cũng khá... dễ thương (nếu học đúng
+        cách). Bốn kỹ năng, một hành trình và một đám bạn đồng hành siêu nhây
+        (tụi mình đấy!). Từ speaking líu lưỡi tới writing bí ý, đừng lo – tụi
+        mình luôn có cách cứu bạn. Và bonus: luôn có động viên nhẹ nhàng kiểu
+        “cố lên, sắp được Band 8 rồi!”
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>🌈 Về Diệu Thanh English</h2>
+      <p>
+        Tụi mình không phải siêu trung tâm, tụi mình là “ngôi nhà nhỏ” nơi bạn
+        có thể nói tiếng Anh... lắp bắp cũng không ai cười! Tụi mình tin rằng
+        học tiếng Anh là để hiểu, để vui, và... để thi qua nữa (haha). Giáo viên
+        ở đây không lạnh lùng đọc slide – mà ấm áp hỏi bạn "bữa nay vui hông?"
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>📩 Liên hệ tụi mình nhen!</h2>
+      <p>
+        Email: dieuthanhtran@dolphin.homes<br />
+        Facebook: fb.com/dieuthanh.tran.7311<br />
+        Zalo: 032 758 9397 (đừng ngại, nhắn hỏi gì tụi mình cũng trả lời hết
+        trơn!)
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Diệu Thanh English. Làm bài tập vui vẻ, dạy học chân thành – đúng
+      kiểu "một khi đã máu, đừng hỏi ngữ pháp ở đâu ra" 😄
+    </footer>
+  </body>
+</html>

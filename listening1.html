@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC Part 1 Practice</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding-bottom: 100px;
+        background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .question {
+        margin-bottom: 30px;
+      }
+      .question img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+      .choices label {
+        display: block;
+        margin: 5px 0;
+      }
+      .audio-player {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fce4ec;
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .audio-player audio {
+        width: 100%;
+      }
+      #result {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 20px;
+        color: #388e3c;
+      }
+      button {
+        padding: 10px 20px;
+        background: #81d4fa;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TOEIC Part 1 Practice</h1>
+      <div id="question-container"></div>
+      <button onclick="checkAnswers()">Xem kết quả</button>
+      <p id="result"></p>
+    </div>
+
+    <div class="audio-player">
+      <audio controls>
+        <source src="Test_01-Part1.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          id: "q1",
+          image: "1.png",
+          choices: {
+            A,
+            B,
+            C,
+            D,
+          },
+          correct: "A",
+        },
+        {
+          id: "q2",
+          image: "images/pic2.jpg",
+          choices: {
+            A: "The woman is painting.",
+            B: "The woman is playing the piano.",
+            C: "The woman is running.",
+            D: "The woman is sleeping.",
+          },
+          correct: "B",
+        },
+        // Thêm các câu hỏi q3 đến q6 tại đây
+      ];
+
+      const container = document.getElementById("question-container");
+
+      questions.forEach((q, index) => {
+        let html = `
+        <div class="question" id="${q.id}">
+          <p><strong>Question ${index + 1}:</strong></p>
+          <img src="${q.image}" alt="Question ${index + 1} Image" />
+          <div class="choices">
+            ${Object.entries(q.choices)
+              .map(
+                ([key, value]) =>
+                  `<label><input type="radio" name="${q.id}" value="${key}" /> ${key}. ${value}</label>`
+              )
+              .join("")}
+          </div>
+        </div>
+      `;
+        container.innerHTML += html;
+      });
+
+      function checkAnswers() {
+        let score = 0;
+        questions.forEach((q) => {
+          const selected = document.querySelector(
+            `input[name="${q.id}"]:checked`
+          );
+          if (selected && selected.value === q.correct) {
+            score++;
+          }
+        });
+        document.getElementById(
+          "result"
+        ).innerText = `Bạn đúng ${score}/${questions.length} câu.`;
+      }
+    </script>
+  </body>
+</html>
