@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "part1"
+    label: "Part 1 Questions"
+    folder: "content/part1"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Audio",
+          name: "audio",
+          widget: "file",
+          media_library: { config: { multiple: false } },
+        }
+      - {
+          label: "Answers",
+          name: "answers",
+          widget: "list",
+          fields: [{ label: "Option", name: "option", widget: "string" }],
+        }
+      - { label: "Correct Answer", name: "correct", widget: "string" }
